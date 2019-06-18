@@ -1,18 +1,8 @@
 #### Here are some of my personal projects
 
 
-Some md files that explain the projects and give instructions to run them are under construction!
-(looking in the folders probably won't tell you much, but you can read the code)
+The current folder is a collection of md files that fully explain the projects and link to the code/relevant material. For projects without respective md files (some md files are under construction), the fully commented code can be found [here](http://github.com/andy9kv/Projects/Project_Files).
 
-
-
-#### Finished Notable Projects
-
-##### Traffic-Sign Detector
-
-##### Independently-Moving Object Tracker
-
-##### Nautical Flag Recognition
 
 #### In-Progress Projects
 
