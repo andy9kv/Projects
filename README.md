@@ -1,7 +1,7 @@
 #### Here are some of my personal projects
 
 
-The current folder is a collection of md files that fully explain the projects and link to the code/relevant material. For projects without respective md files (some md files are under construction), the fully commented code can be found [here](https://github.com/andy9kv/Projects/tree/master/Project_Files).
+The current folder is a collection of md files that fully explain my (more or less) finished projects and link to the code/relevant material. For projects without respective md files (some md files are under construction), the fully commented code can be found [here](https://github.com/andy9kv/Projects/tree/master/Project_Files).
 
 
 #### In-Progress Projects
