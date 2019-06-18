@@ -1,0 +1,12 @@
+Notes on Project:
+
+	-image.c has warings when compiled. I did not fix this since we were instructed not to mess with image.c
+	-command: make or make Stego creates executable Stego
+	-command: make StegoExtract creates executable StegoExtract
+	-command: make clean removes all executables, object files, and create a clean copy of Img1.pgm and Img2.pgm called Stego1.pgm and Stego2.pgm. A recomended cycle would look like this:
+		make
+		Stego Img1.pgm Stego1.pgm payload1.txt
+		make StegoExtract
+		StegoExtract Stego1.pgm out.txt
+		make clean
+		//make out.txt empty(Makefile does not do this) 

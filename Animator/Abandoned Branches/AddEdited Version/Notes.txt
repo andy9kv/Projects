@@ -1,0 +1,21 @@
+
+Notes on the Animator Projects
+
+-Add a uniqueID to all nodes. No two nodes, past or present, across different Scene Graphs, can have the same ID, unless they are a node that has been copied, which means there must be some kind of method of keeping track of new ID's between scenes, perhaps to be introduced in the Flipbook class
+
+To Do List
+	-rewrite AddEditedNode, which includes findByPosition, getPosition, and checkLevel
+	-Make the number of Polygon vertices immutable
+	-write the autoBridgeScenes method
+
+Problems with unique ID
+
+	-can give other nodes the same id when copying but,
+	-how to make sure that new created nodes do not accidently get an ID that is in use?
+
+Possible Solutions
+	
+	-perhaps each new node can request a number from the flipbook class?
+	-perhaps upon getting a new id, a node should check with all other nodes? (very costly)
+	-perhaps the nodes can get random IDs that change upon being added to the flipbook?    
+

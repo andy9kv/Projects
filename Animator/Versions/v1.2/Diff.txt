@@ -1,0 +1,13 @@
+
+Differences between Version 1.1 & Version 1.2:
+
+	-Fixed SG copy constructor (very heavily used)
+	-Addressed many uniqueID issues, including:
+		-Created constructors in the Node class that resolved the
+	 	 uniqueID issue upon creation
+	 	-Fixed the comparison in SceneGraph.buildLeaf to compare nodes
+	 	 by their uniqueID instead of names
+	 	-Made sure that all instances of node creation included 
+	 	 establishing uniqueIDs
+    -Began working on a TerminalOutput.java, a class to print a
+     Scene Graph to the terminal, still not finished with bugs
