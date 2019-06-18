@@ -18,7 +18,7 @@
 
 ## Implementation 
 
-It is around X lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found here.
+It is around 900 lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found [here](https://github.com/andy9kv/Projects/tree/master/Project_Files/Nautical%20Flag%20Detection/Implementations/v2.1).
 
 ## Results
 
