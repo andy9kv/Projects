@@ -16,25 +16,10 @@
 * [Microsoft Visual Studio 2017](https://www.microsoft.com/en-us/store/b/visualstudio?invsrc=search&cl_vend=google&cl_ch=sem&cl_camp=913950141&cl_adg=48518817547&cl_crtv=248911024062&cl_kw=microsoft%20visual%20studio%202017&cl_pub=google.com&cl_place=&cl_dvt=c&cl_pos=1t1&cl_mt=e&cl_gtid=aud-374935196045:kwd-302533615179&cl_pltr=&cl_dim0=WZYFKgAAAG2Yd0c-:20180618232536:s&OCID=AID695938_SEM_WZYFKgAAAG2Yd0c-:20180618232536:s&s_kwcid=AL!4249!3!248911024062!e!!g!!microsoft%20visual%20studio%202017&ef_id=WZYFKgAAAG2Yd0c-:20180618232536:s) - IDE + Display Tools
 * [OpenCV 3.3](https://opencv.org/opencv-3-3.html) - Basic Image Management
 
-## Implementation Specifics & Demonstration
+## Implementation 
 
-Videos of the software in action
+It is around X lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found here.
 
-## First Attempts, Roadblocks, and Failures
+## Results
 
-Dicussion of the me screwing up in all 500+ ways i did. Some discussion of versions
-
-Discuss
--Initial bordering algorithim (had to waste lots time and switch algos)
--Facing faded colors (got around this by applying a filtering process with detection -> if failed -> relax filters -> check again -> if failed -> keep trying until filters are too relaxed and are showing other parts of the image as red (then finally give up))
-
-## Setting Up & Running the Program
-
-Insert how to download and run here
-
-## Future Improvements & Applications
-
-Add additional notes about how to deploy this on a live system
-
-## Acknowledgments
 
