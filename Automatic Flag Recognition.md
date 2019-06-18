@@ -22,10 +22,9 @@ It is around 900 lines of C++. Setting up Microsoft Studio to work with OpenCV i
 
 ## Results & Demonstration
 
-There was an accuracy of approximately 90% when scanning flags within the test set. Like most vision endeavors, the program struggled the most when dealing with poor lighting, similar surrounding hues, and obstruction. Links to demonstration videos will be posted but the following images illuminate the iterative color thresholding and pattern/color match processes.
+There was an accuracy of approximately 90% when scanning flags within the test set. Like most vision endeavors, the program struggled the most when dealing with poor lighting, similar surrounding hues, and obstruction. Links to demonstration videos will be posted but the following images illustrate the iterative color thresholding and pattern/color match processes.
 
 <br><p align="center"><img width="70%" height="70%" src="media/afr/area_isolation_2.png"></p><br>
-
 
 <br><p align="center"><img width="70%" height="70%" src="media/afr/progressive_color_filtering_1.png"></p><br>
 
