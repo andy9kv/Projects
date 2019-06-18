@@ -20,6 +20,12 @@
 
 It is around 900 lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found [here](https://github.com/andy9kv/Projects/tree/master/Project_Files/Nautical%20Flag%20Detection/Implementations/v2.1).
 
-## Results
+## Results & Demonstration
 
+There was an accuracy of approximately 90% when scanning flags within the test set. Like most vision endeavors, the program struggled the most when dealing with poor lighting, similar surrounding hues, and obstruction. Links to demonstration videos will be posted but the following images illuminate the iterative color thresholding and pattern/color match processes.
+
+<br><p align="center"><img width="70%" height="70%" src="media/afr/area_isolation_2.png"></p><br>
+
+
+<br><p align="center"><img width="70%" height="70%" src="media/afr/progressive_color_filtering_1.png"></p><br>
 
