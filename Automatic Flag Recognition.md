@@ -6,7 +6,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;The high level architecture of this software can be roughly split into four parts: preprocessing, bordering, pattern matching, and repetition. The algorithm is specified as follows; first applying a color filter to the given image (preprocessing), then isolating a particular area of color that fits a part of the target flag such as red stripes in an image when the target flag also has a red stripes (bordering), third checking if proportional surrounding areas are the colors they should be to match the current target flag (pattern matching), and finally repeating this process with new color filters or new target flags until they are exhausted (repetition). The graphic below provides a visualization of this process,
    
-   <br><p align="center"><img width="70%" height="70%" src="media/afr/algorithm_visual.png"></p><br>
+   <br><p align="center"><img width="70%" height="70%" src="Project_Files/Nautical_Flag_Detection/media/algorithm_visual.png"></p><br>
    
    
 &nbsp;&nbsp;&nbsp;&nbsp;The central concept in this program is detecting flags by searching for their patterns and colors in an image. Taking a simple example, if the target flag has alternating red and blue stripes, the progam would first filter for red and blue colors and then look for long rectangular red regions next long rectanglar blue reagions in an alternating pattern until all the stripes have been found. However, things get more complicated when target flags have different sized regions of color in them or have other unusual features. This is mostly taken care of by comparing different regions proportionally to each other to see if there is a match. There are pleanty more examples, images to illustrate the algorithim, and videos to show the software in action below.
@@ -18,13 +18,13 @@
 
 ## Implementation 
 
-It is around 900 lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found [here](https://github.com/andy9kv/Projects/tree/master/Project_Files/Nautical%20Flag%20Detection/Implementations/v2.1).
+It is around 900 lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found [here](Project_Files/Nautical_Flag_Detection/Implementations/v2.1).
 
 ## Results & Demonstration
 
 There was an accuracy of approximately 90% when scanning flags within the test set. Like most vision endeavors, the program struggled the most when dealing with poor lighting, similar surrounding hues, and obstruction. Links to demonstration videos will be posted but the following images illustrate the iterative color thresholding and pattern/color match processes.
 
-<br><p align="center"><img width="70%" height="70%" src="media/afr/area_isolation_2.png"></p><br>
+<br><p align="center"><img width="70%" height="70%" src="Project_Files/Nautical_Flag_Detection/media/area_isolation_2.png"></p><br>
 
-<br><p align="center"><img width="70%" height="70%" src="media/afr/progressive_color_filtering_1.png"></p><br>
+<br><p align="center"><img width="70%" height="70%" src="Project_Files/Nautical_Flag_Detection/media/progressive_color_filtering_1.png"></p><br>
 
