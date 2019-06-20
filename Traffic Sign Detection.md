@@ -5,7 +5,7 @@ Sign detection, recognition, and identification are imperative for many autonomo
 
 ## Architecture
 
-
+<br><p align="center"><img width="70%" height="70%" src="Project_Files/Traffic_Sign_Detection/media/traffic_algo.png"></p><br>
 
 ## Implementation
 
