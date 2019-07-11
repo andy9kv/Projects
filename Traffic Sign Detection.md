@@ -10,18 +10,18 @@ Sign detection, recognition, and identification are imperative for many autonomo
 The graphic above shows the gist of the algorithm. A more specific description is here below,
 	
   For each frame in the video	
-	1 Color Threshold using HSV equivalents of each frame to isolate
+	1. Color Threshold using HSV equivalents of each frame to isolate
 	  sign colors only
-	2 Produce an edge map of the thresholded image using sobel or canny
-	3 Find contours in the binary edge map
-	4 Refine the contours by their position and area (i.e eliminate
+	2. Produce an edge map of the thresholded image using sobel or canny
+	3. Find contours in the binary edge map
+	4. Refine the contours by their position and area (i.e eliminate
 	  contours around the edges of the image or contours that define
 	  an area too small for consideration)
-	5 Classify all remaning contours into shapes (Triangle, Square,
+	5. Classify all remaning contours into shapes (Triangle, Square,
 	  Octagon, etc) by approximating the curve of the contours using
 	  the Ramer–Douglas–Peucker algorithm. [opencv provides an
 	  implementation of this](https://docs.opencv.org/3.1.0/dd/d49/tutorial_py_contour_features.html)
-	6 Draw a bounding box around the resulting shapes that are likely
+	6. Draw a bounding box around the resulting shapes that are likely
 	  to be signs
 
 ## Implementation
