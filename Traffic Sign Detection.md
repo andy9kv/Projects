@@ -29,7 +29,7 @@ Libraries Used:
 
 &nbsp;&nbsp;&nbsp;&nbsp;A peek behind the curtain; before scanning for possible sign shapes or any application of the polygon approximation function, the program must isolate edges from non-edges in the image. Opencv 3.3 offers an implementation of the [Canny edge detector](https://docs.opencv.org/3.1.0/da/d22/tutorial_py_canny.html), however it does not offer a sufficient degree of precision in the detected edges. As shown below, the canny edge detector isolates only the most significant edges whereas my implementation of the [sobel filter](https://en.wikipedia.org/wiki/Sobel_operator) produces an edge map with much more detail. A sample of both edge operators applied to a recording of a drive in NYC is shown below (left: canny, right: sobel), 
 
-PUT A SIDE BY SIDE VIEW OF RAW VID AND SOBEL AND CANNY TO COMPARE
+![](/Project_Files/Traffic_Sign_Detection/media/sobel.gif)  |  ![](/Project_Files/Traffic_Sign_Detection/media/sobel.gif)  |  ![](/Project_Files/Traffic_Sign_Detection/media/sobel.gif)
 
 ## Demos
 
