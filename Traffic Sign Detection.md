@@ -12,11 +12,11 @@ Written in Python, using OpenCV and NumPy, in May 2019.
 The graphic above shows the gist of the algorithm. A more specific description is here below,
 	
   For each frame in the video	
-1. Color Threshold using HSV equivalents of each frame to isolate sign colors only
-2. Produce an edge map of the thresholded image using sobel or canny
-3. Find contours in the binary edge map
-4. Refine the contours by their position and area (i.e eliminate contours around the edges of the image or contours that define an area too small for consideration)
-5. Classify all remaning contours into shapes (Triangle, Square, Octagon, etc) by approximating the curve of the contours using the Ramer–Douglas–Peucker algorithm ([opencv provides an implementation of this](https://docs.opencv.org/3.1.0/dd/d49/tutorial_py_contour_features.html)).
+1. Color Threshold using HSV equivalents of each frame to isolate sign colors only as the HSV colorspace is sensitive to light whereas the BGR colorspace isn't. HSV images are Hue-Saturation-Value triplets where the brightness can be isolated, however BGR images are Blue-Green-Red triplets and are therefore vulnerable to changes in luminosity. More on this [here](https://en.wikipedia.org/wiki/HSL_and_HSV)
+2. Produce an edge map of the thresholded image using sobel or canny. As shown below in Implementation, sobel filters yield grayscale images where each pixel's value corresponds to its "edge-ness". Canny, on the other hand, produces a binary image that marks all edge pixel as 1 without discrimination, and all other pixels as 0
+3. Find contours in the binary edge map using the built in OpenCV/NumPy functions
+4. Refine the contours by their position and area. This amounts to eliminating contours around the edges of the image where there could be no traffic signs or contours that border areas too small for consideration
+5. Classify all remaning contours into shapes (Triangle, Square, Octagon, etc) by approximating the curve of the contours using the Ramer–Douglas–Peucker algorithm ([opencv provides an implementation of this](https://docs.opencv.org/3.1.0/dd/d49/tutorial_py_contour_features.html))
 6. Draw a bounding box around the resulting shapes that are likely to be signs
 
 ## Implementation
@@ -27,13 +27,13 @@ Libraries Used:
 * [OpenCV 3.3](https://opencv.org/opencv-3-3.html) - Image management and computer vision algorithm implementations
 * [NumPy](https://www.numpy.org/) - Powerful and efficient n-dimensional array implementation (and much more!)
 
-&nbsp;&nbsp;&nbsp;&nbsp;It is imperative to isolate edges from non-edges in the image before scanning for possible sign shapes or any application of the polygon approximation function. Opencv 3.3 offers an implementation of the [Canny edge detector](https://docs.opencv.org/3.1.0/da/d22/tutorial_py_canny.html), however it does not offer a sufficient degree of precision in the detected edges. As shown below, the canny edge detector isolates only the most significant edges whereas my implementation of the [sobel filter](https://en.wikipedia.org/wiki/Sobel_operator) produces an edge map with much more detail. A sample of both edge operators applied to a recording of a drive in NYC is shown below (top left: canny, top right: original stream, bottom: sobel), 
+&nbsp;&nbsp;&nbsp;&nbsp;It is imperative to isolate edges from non-edges in the image before scanning for possible sign shapes or any application of the polygon approximation function. Opencv 3.3 offers an implementation of the [Canny edge detector](https://docs.opencv.org/3.1.0/da/d22/tutorial_py_canny.html), however it does not offer a sufficient degree of precision in the detected edges. As shown below, the canny edge detector isolates only the most significant edges whereas my implementation of the [sobel filter](https://en.wikipedia.org/wiki/Sobel_operator) produces an edge map with much more detail, highlighting the edges based on their significance. Thus, the canny operator returns a binary image where pixels can be either white or black (1 or 0) while the sobel operator returns a grayscale image. A sample of both edge operators applied to a recording of a drive in NYC is shown below (top left: canny, top right: original stream, bottom: sobel), 
 
 <p float="center"> 
-	<img width="49%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/canny.gif">
-	<img width="49%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/original.gif">
+	<img width="48%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/canny.gif">
+	<img width="48%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/original.gif">
 </p>
-<p float="center"> <img width="98%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/sobel.gif"> </p>
+<p float="center"> <img width="96%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/sobel.gif"> </p>
 
 ## Demos
 
