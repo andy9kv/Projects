@@ -3,6 +3,8 @@
 
 Sign detection, recognition, and identification are imperative for many autonomous robotic applications such as self-driving cars. To solve this problem, in many cases, learning-based approaches are favored where there are no explicit, human-given instructions rather machine-derived solutions. This approach is different in that it relies exclusivly on computer vision techniques to detect (not identify) traffic signs in a video. Initially, this was a team project where each member presented different solutions to the problem (associated [white paper](/Project_Files/Traffic_Sign_Detection/whitepaper.pdf)). The following is my solution.
 
+Written in Python, using OpenCV and NumPy. Written in May 2019
+
 ## Architecture
 
 <br><p align="center"><img width="70%" height="70%" src="Project_Files/Traffic_Sign_Detection/media/traffic_algo.png"></p><br>
@@ -25,7 +27,7 @@ Libraries Used:
 * [OpenCV 3.3](https://opencv.org/opencv-3-3.html) - Image management and computer vision algorithm implementations
 * [NumPy](https://www.numpy.org/) - Powerful and efficient n-dimensional array implementation (and much more!)
 
-A peek behind the curtain; before scanning for possible sign shapes or any application of the polygon approximation function, the program chooses between sobel and canny edge detectors. Typically, the canny edge detector isolates only the most significant edges whereas the sobel filter produces an edge map with much more detail.
+A peek behind the curtain; before scanning for possible sign shapes or any application of the polygon approximation function, the program must isolate edges from non-edges in the image. Opencv 3.3 offers an implementation of the [Canny edge detector](https://docs.opencv.org/3.1.0/da/d22/tutorial_py_canny.html), however it does not offer a sufficient degree of precision in the detected edges. As shown below, the canny edge detector isolates only the most significant edges whereas my implementation of the [sobel filter](https://en.wikipedia.org/wiki/Sobel_operator) produces an edge map with much more detail. A sample of both edge operators applied to a recording of a drive in NYC is shown below (left: canny, right: sobel), 
 
 PUT A SIDE BY SIDE VIEW OF RAW VID AND SOBEL AND CANNY TO COMPARE
 
