@@ -9,6 +9,8 @@ Written in Python, using OpenCV and NumPy, in November 2018.
 
 <br><p align="center"><img width="70%" height="70%" src="Project_Files/Object_Tracking/media/obj_algo.png"></p><br>
 
+The 
+
 The graphic above shows the gist of the algorithm. A more specific description is here below,
 	
   For each frame in the video	
