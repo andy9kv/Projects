@@ -9,7 +9,7 @@ Written in Python, using OpenCV and NumPy, in November 2018.
 
 <br><p align="center"><img width="70%" height="70%" src="Project_Files/Object_Tracking/media/obj_algo.png"></p><br>
 
-The 
+The algorithm begins by extracting key points or features from the input images. Using [SIFT](Project_Files/Object_Tracking/SIFT.pdf) or the [Harris Corner Detector] (Project_Files/Object_Tracking/HCD.pdf), the program creates a list of features from the given images. After obtaining a satisfactory list of key features, the first few frames of the video are scanned to correspond the key points and thus detect the object.
 
 The graphic above shows the gist of the algorithm. A more specific description is here below,
 	
