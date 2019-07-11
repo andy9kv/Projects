@@ -1,6 +1,6 @@
 # Automatic Recognition of Nautical Flags
 
-&nbsp;&nbsp;&nbsp;&nbsp;The [International Martime Signal Flags](https://en.wikipedia.org/wiki/International_maritime_signal_flags) are 26 flags used by ships at sea to communicate short messages when other forms of communication fail. These flags are typically displayed individually, however they also can be displayed in combination with one another for more complex messages. This detection software inspects an image and determines which signal flags (if any) are present using a variety of techniques including boundry detection, incremental filtering, pattern recognition and several statistical measues. Built with OpenCV 3.3 using Microsoft Visual Studio 2017 in C++.
+&nbsp;&nbsp;&nbsp;&nbsp;The [International Martime Signal Flags](https://en.wikipedia.org/wiki/International_maritime_signal_flags) are 26 flags used by ships at sea to communicate short messages when other forms of communication fail. These flags are typically displayed individually, however they also can be displayed in combination with one another for more complex messages. This detection software inspects an image and determines which signal flags (if any) are present using a variety of techniques including boundry detection, incremental filtering, pattern recognition and several statistical measues. Built with OpenCV 3.3 using Microsoft Visual Studio 2017 in C++, written in December 2017.
 
 ## Architecture
 
