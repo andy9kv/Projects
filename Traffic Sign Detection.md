@@ -29,5 +29,5 @@ Libraries Used:
 
 <br><p align="center"><img width="100%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif"></p><br>
 
-## Run it yourself
+Although imperfect, this implementation detects traffic signs with a high level of accuracy. The miss rate (missing a sign altogether) is quite low but the rate of false positives is more common then expected. Machine learning models, though costly to build, are much quicker and computationally efficient with near-perfect results. 
 
