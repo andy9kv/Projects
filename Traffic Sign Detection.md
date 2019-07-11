@@ -17,7 +17,7 @@ Libraries Used:
 
 ## Demos
 
-<br><p align="center"><img width="70%" height="70%" src="Project_Files/Traffic_Sign_Detection/media/traffic_algo.png"></p><br>
+<br><p align="center"><img width="70%" height="70%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif"></p><br>
 
 ## Run it yourself
 
