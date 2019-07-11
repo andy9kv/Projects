@@ -18,11 +18,11 @@
 
 ## Implementation 
 
-   It is around 900 lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found [here](Project_Files/Nautical_Flag_Detection/Implementations/v2.1).
+&nbsp;&nbsp;&nbsp;&nbsp;It is around 900 lines of C++. Setting up Microsoft Studio to work with OpenCV is more than just a little tricky which really motivated me to move away from IDEs. The latest code for this project can be found [here](Project_Files/Nautical_Flag_Detection/Implementations/v2.1).
 
 ## Results & Demonstration
 
-   There was an accuracy of approximately 90% when scanning flags within the test set of roughly 200 images. From the failed test cases, most cases were false negatives (9% of the 10% error), where the program failed to recognize a flag. Only a couple cases were false positives wher the software accidently recognized a pattern on a shirt. Like most vision endeavors, the program struggled the most when dealing with poor lighting, similar surrounding hues, and obstruction. Links to demonstration videos will be posted but the following images illustrate the iterative color thresholding and pattern/color match processes.
+&nbsp;&nbsp;&nbsp;&nbsp;There was an accuracy of approximately 90% when scanning flags within the test set of roughly 200 images. From the failed test cases, most cases were false negatives (9% of the 10% error), where the program failed to recognize a flag. Only a couple cases were false positives wher the software accidently recognized a pattern on a shirt. Like most vision endeavors, the program struggled the most when dealing with poor lighting, similar surrounding hues, and obstruction. Links to demonstration videos will be posted but the following images illustrate the iterative color thresholding and pattern/color match processes.
 
 <br><p align="center"><img width="70%" height="70%" src="Project_Files/Nautical_Flag_Detection/media/area_isolation_2.png"></p><br>
 
