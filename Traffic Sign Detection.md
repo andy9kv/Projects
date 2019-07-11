@@ -25,7 +25,13 @@ Libraries Used:
 * [OpenCV 3.3](https://opencv.org/opencv-3-3.html) - Image management and computer vision algorithm implementations
 * [NumPy](https://www.numpy.org/) - Powerful and efficient n-dimensional array implementation (and much more!)
 
+A peek behind the curtain; before scanning for possible sign shapes or any application of the polygon approximation function, the program chooses between sobel and canny edge detectors. Typically, the canny edge detector isolates only the most significant edges whereas the sobel filter produces an edge map with much more detail.
+
+PUT A SIDE BY SIDE VIEW OF RAW VID AND SOBEL AND CANNY TO COMPARE
+
 ## Demos
+
+The following is a highlight reel of this software applied to several videos from the Berkley DeepDrive dataset
 
 <br><p align="center"><img width="100%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif"></p><br>
 
