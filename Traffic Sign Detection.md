@@ -31,11 +31,9 @@ Libraries Used:
 
 <p float="left"> 
 	<img width="33%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif">
-	<img width="33%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif">
+	<img width="32%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif">
 	<img width="33%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif"> 
 </p>
-
-![](/Project_Files/Traffic_Sign_Detection/media/sobel.gif) ![](/Project_Files/Traffic_Sign_Detection/media/sobel.gif) ![](/Project_Files/Traffic_Sign_Detection/media/sobel.gif)
 
 ## Demos
 
