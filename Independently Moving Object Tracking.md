@@ -29,7 +29,7 @@ Below we see mask M from the previous frame (green) attempting to find the optim
 
 &nbsp;&nbsp;&nbsp;&nbsp;This algorithm was implemented in 500 lines of Python code. The code can be found [here](Project_Files/Object_Tracking/tracker.py). Running it may be difficult as it requires OpenCV, which is notoriously difficult to install. The implementation is divided into three major parts: video reading and writing, feature extraction/correspondence, and mask creation/matching. The current implementation is rather slow, but it can be much quicker if the techniques used in my [Traffic Sign Detection project](Traffic%20Sign%20Detection.md) (such as lambda functions and vectorization) are used here. Note: Please forgive my horribly ineffient use of double for loops iterating over a matrix. I implore you, consult my other detection projects to realize that this is not, in fact, my creative zenith.
 
-The following example shows (from left to right): original video stream, each frames Key Points extracted by SIFT and the Harris Corner detector, the adaptive mask learning from and adaping to the delta of each frame, and the tracked object,
+&nbsp;&nbsp;&nbsp;&nbsp;The following example shows (from left to right): original video stream, each frames Key Points extracted by SIFT and the Harris Corner detector, the adaptive mask learning from and adaping to the delta of each frame, and the tracked object,
 
 <p align="center" float="center"> 
 	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image10.gif">
@@ -44,7 +44,7 @@ Libraries Used:
 
 ## Results & Conclusion
 
-The algorithm was able to successfully track the movements (and even the rotations!) of the target objects in most cases. The difficulties came when there was rapid rotation. In a slow rotation, the adaptive mask is able to learn of the changing object. For most rotating objects, some detected features are no longer present, while new ones appear. For example, as a human turns in place, their face disappears as their hair comes into view. This program can handle those cases, provided the mask has time to adjust. Thus, rapid rotations cause this program to lose the target object and conclude the object disappeared from view. Here are some examples of this code applied to videos of vehicles,
+&nbsp;&nbsp;&nbsp;&nbsp;The algorithm was able to successfully track the movements (and even the rotations!) of the target objects in most cases. The difficulties came when there was rapid rotation. In a slow rotation, the adaptive mask is able to learn of the changing object. For most rotating objects, some detected features are no longer present, while new ones appear. For example, as a human turns in place, their face disappears as their hair comes into view. This program can handle those cases, provided the mask has time to adjust. Thus, rapid rotations cause this program to lose the target object and conclude the object disappeared from view. Here are some examples of this code applied to videos of vehicles,
 
 <p align="center" float="center"> 
 	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/drone1.gif">
@@ -53,6 +53,17 @@ The algorithm was able to successfully track the movements (and even the rotatio
 <p align="center" float="center"> 
 	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/motor1.gif">
 	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/motor2.gif">
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;As evident in the upper demonstration, the algorithm was able to stay on the boy despite the changing camera angle because it was gradual enough for the adaptive mask to adjust to the new face. Below are a couple cases where the rotation is too abrupt, causing the tracker to stumble,
+
+<p align="center" float="center"> 
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/image12.gif">
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/image13.gif">
+</p>
+<p align="center" float="center"> 
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/image15.gif">
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/image14.gif">
 </p>
 
 failues and why they failed
