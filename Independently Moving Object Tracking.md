@@ -31,7 +31,7 @@ Below we see mask M from the previous frame (green) attempting to find the optim
 
 The following example shows (from left to right): original video stream, each frames Key Points extracted by SIFT and the Harris Corner detector, the adaptive mask learning from and adaping to the delta of each frame, and the tracked object,
 
-<p float="center"> 
+<p align="center" float="center"> 
 	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image10.gif">
 	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image8.gif">
 	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image9.gif">
