@@ -1,7 +1,7 @@
 
 # Independently-Moving Object Tracker
 
-&nbsp;&nbsp;&nbsp;&nbsp;Object tracking is very important for autonomous robots. Self-navigating vehicles, drones, and several other automatons require object tracking to function. This may be a fairly easy problem if a proven machine learning model were implemented to detect and track an object throughout a video, however I attempted a somewhat different approach. My solution uses feature correspondence to identify a particular object in the first frames of the video for detection, followed by feature correspondence with an adaptive mask to track the changing object throught the sequence. The whitepaper I wrote to present and thoroughly describe my work can be found [here](/Project_Files/Object_Tracking/Independently-Moving%20Object%20Detection.pdf).
+&nbsp;&nbsp;&nbsp;&nbsp;Object detection and tracking is very important for autonomous robots. Self-navigating vehicles, drones, and several other automatons require object tracking to function. This may be a fairly easy problem if a proven machine learning model were implemented to detect and track an object throughout a video, however I attempted a somewhat different approach. My solution uses feature correspondence to identify a particular object in the first frames of the video for detection, followed by feature correspondence with an adaptive mask to track the changing object throught the sequence. The whitepaper I wrote to present and thoroughly describe my work can be found [here](/Project_Files/Object_Tracking/Independently-Moving%20Object%20Detection.pdf).
 
 Written in Python, using OpenCV and NumPy, in November 2018.
 
@@ -9,17 +9,22 @@ Written in Python, using OpenCV and NumPy, in November 2018.
 
 <br><p align="center"><img width="70%" height="70%" src="Project_Files/Object_Tracking/media/obj_algo.png"></p><br>
 
-The algorithm begins by extracting key points or features from the input images. Using [SIFT](Project_Files/Object_Tracking/SIFT.pdf) or the [Harris Corner Detector] (Project_Files/Object_Tracking/HCD.pdf), the program creates a list of features from the given images. After obtaining a satisfactory list of key features, the first few frames of the video are scanned to correspond the key points and thus detect the object.
+&nbsp;&nbsp;&nbsp;&nbsp;The first step is to find the desired object in the video. This is done by observing features from the same object in other images and searching for those features in the beginning of the video. Thus, the algorithm begins by extracting key points or features from some input images (other images containing the target object). Using [SIFT](Project_Files/Object_Tracking/SIFT.pdf) and the [Harris Corner Detector] (Project_Files/Object_Tracking/HCD.pdf), the program creates a list of features from the given images. After obtaining a satisfactory list of key features, the first few frames of the video are scanned to correspond the key points between the input images and the initial video frames. If a sufficient correspondence is found around position X, we conclude the desired object has been found at that location.  
 
-The graphic above shows the gist of the algorithm. A more specific description is here below,
+<p>
+    <img src="Project_Files/Object_Tracking/media/bike.jpg" alt>
+    <em>An example of feature correspondence</em>
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;Once the object is detected in the first frame, the algorithm tracks the object throughout the video by noting the slight linear transformations in each frame. In other words, the algorithm must keep track of the object's change in position, rotation, and scale as the video progresses with the key observation that these changes will be minor. This is handled by an adaptive mask that adopts a mold for each new face of the object. The algorithm is thus,
 	
   For each frame in the video	
-1. Color Threshold using HSV equivalents of each frame to isolate sign colors only as the HSV colorspace is sensitive to light whereas the BGR colorspace isn't. HSV images are Hue-Saturation-Value triplets where the brightness can be isolated, however BGR images are Blue-Green-Red triplets and are therefore vulnerable to changes in luminosity. More on this [here](https://en.wikipedia.org/wiki/HSL_and_HSV)
-2. Produce an edge map of the thresholded image using sobel or canny. As shown below in Implementation, sobel filters yield grayscale images where each pixel's value corresponds to its "edge-ness". Canny, on the other hand, produces a binary image that marks all edge pixel as 1 without discrimination, and all other pixels as 0
-3. Find contours in the binary edge map using the built in OpenCV/NumPy functions
-4. Refine the contours by their position and area. This amounts to eliminating contours around the edges of the image where there could be no traffic signs or contours that border areas too small for consideration
-5. Classify all remaning contours into shapes (Triangle, Square, Octagon, etc) by approximating the curve of the contours using the Ramer–Douglas–Peucker algorithm ([opencv provides an implementation of this](https://docs.opencv.org/3.1.0/dd/d49/tutorial_py_contour_features.html))
-6. Draw a bounding box around the resulting shapes that are likely to be signs
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
 
 ## Implementation
 
