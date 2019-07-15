@@ -12,7 +12,7 @@ Written in Python, using OpenCV and NumPy, in November 2018.
 &nbsp;&nbsp;&nbsp;&nbsp;The first step is to find the desired object in the video. This is done by observing features from the same object in other images and searching for those features in the beginning of the video. Thus, the algorithm begins by extracting key points or features from some input images (other images containing the target object). Using [SIFT](Project_Files/Object_Tracking/SIFT.pdf) and the [Harris Corner Detector] (Project_Files/Object_Tracking/HCD.pdf), the program creates a list of features from the given images. After obtaining a satisfactory list of key features, the first few frames of the video are scanned to correspond the key points between the input images and the initial video frames. If a sufficient correspondence is found around position X, we conclude the desired object has been found at that location.  
 
 <p>
-    <img width="60%" height="60%" src="Project_Files/Object_Tracking/media/bike.jpg" alt>
+    <img align="center" width="60%" height="60%" src="Project_Files/Object_Tracking/media/bike.jpg" alt>
     <em align="center">An example of feature correspondence</em>
 </p>
 
