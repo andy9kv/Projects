@@ -11,17 +11,19 @@ Written in Python, using OpenCV and NumPy, in November 2018.
 
 &nbsp;&nbsp;&nbsp;&nbsp;The first step is to find the desired object in the video. This is done by observing features from the same object in other images and searching for those features in the beginning of the video. Thus, the algorithm begins by extracting key points or features from some input images (other images containing the target object). Using [SIFT](Project_Files/Object_Tracking/SIFT.pdf) and the [Harris Corner Detector] (Project_Files/Object_Tracking/HCD.pdf), the program creates a list of features from the given images. After obtaining a satisfactory list of key features, the first few frames of the video are scanned to correspond the key points between the input images and the initial video frames. If a sufficient correspondence is found around position X, we conclude the desired object has been found at that location. An example of feature correspondence is pictured below,  
 
-<br><p align="center"> <img width="60%" height="60%" src="Project_Files/Object_Tracking/media/bike.jpg" alt> </p><br>
+<br><p align="center"> <img width="55%" height="55%" src="Project_Files/Object_Tracking/media/bike.jpg" alt> </p><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Once the object is detected in the first frame, the algorithm tracks the object throughout the video by noting the slight linear transformations in each frame. In other words, the algorithm must keep track of the object's change in position, rotation, and scale as the video progresses with the key observation that these changes will be minor. This is handled by an adaptive mask that adopts a mold for each new face of the object. The algorithm is thus,
 	
-  For each frame in the video	
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
+  For each frame in the video, where X is the position of the object detected in the previous frame and M is the adaptive mask obtained from the objects face in the previous frame
+1. Apply SIFT and the Harris Corner Detector to produce an list of Key Point, Location pairs
+2. Beginning at position X, overlay mask M and slide it around X, looking for a slightly translated, rotated, and/or scaled object face to fit the mask as close possiblem, M' (i.e. minimize the differnce between M' and M)
+3. Update X with the location of M'
+4. Update M with M'
+
+Below we see mask M from the previous frame (green) attempting to find the optimal M' by considering the key features (white) in the image, extracted by SIFT & Harris,
+
+<br><p align="center"> <img width="60%" height="60%" src="Project_Files/Object_Tracking/media/image5.gif" alt> </p><br>
 
 ## Implementation
 
