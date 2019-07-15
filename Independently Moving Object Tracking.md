@@ -47,12 +47,12 @@ Libraries Used:
 The algorithm was able to successfully track the movements (and even the rotations!) of the target objects in most cases. The difficulties came when there was rapid rotation. In a slow rotation, the adaptive mask is able to learn of the changing object. For most rotating objects, some detected features are no longer present, while new ones appear. For example, as a human turns in place, their face disappears as their hair comes into view. This program can handle those cases, provided the mask has time to adjust. Thus, rapid rotations cause this program to lose the target object and conclude the object disappeared from view. Here are some examples of this code applied to videos of vehicles,
 
 <p align="center" float="center"> 
-	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/drone1.gif">
-	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/drone2.gif">
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/drone1.gif">
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/drone2.gif">
 </p>
 <p align="center" float="center"> 
-	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/motor1.gif">
-	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/motor2.gif">
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/motor1.gif">
+	<img width="33%" height="100%" src="Project_Files/Object_Tracking/media/motor2.gif">
 </p>
 
 failues and why they failed
