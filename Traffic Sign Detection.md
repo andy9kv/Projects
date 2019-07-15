@@ -35,11 +35,11 @@ Libraries Used:
 </p>
 <p float="center"> <img width="96%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/sobel.gif"> </p>
 
-## Demos
+## Results & Conclusion
 
 The following is a highlight reel of the final version of this software applied to several videos from the Berkley DeepDrive dataset,
 
 <br><p align="center"><img width="100%" height="100%" src="Project_Files/Traffic_Sign_Detection/media/demo.gif"></p><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;Although imperfect, this implementation detects traffic signs with a high level of accuracy. The miss rate (missing a sign altogether) is quite low but the rate of false positives is more common then expected. Machine learning models, though costly to build, are much quicker and computationally efficient with near-perfect results. 
+&nbsp;&nbsp;&nbsp;&nbsp;Although imperfect, this implementation detects traffic signs with a high level of accuracy. The miss rate (missing a sign altogether) is quite low but the rate of false positives is more common then expected. This algorithm tends to struggle under certain conditions such as detecting sign with similar-colored backgrounds. Edge detection works by comparing neighboring pixels via convloving a kernel to estimae the horizontal and vertical difference in pixel magnitude. "Edges" are just neighborhoods of pixels that return a high value when the kernel passes over them. Keeping this in mind, if two objects have similar pixel value, detecting an edge between them becomes difficult. This problem is encountered when detecting a green sign on a green, grassy background. Additionally, this algorithm tends to detect false positives when other rectangular shapes are presented to it. The program works mainly by color thresholding, edge detection, and curve approximation. If a yellow triangle is in the video, the software will likely mistake it for a U.S. yield sign, whether it actually is a yield sign or not. A solution (not implemented) would be to cross-reference the detected shapes with text recognition inside those shapes. Such a solution would be very effieicent but would require machine learning as text recognition is incredibly difficult for pure vision approaches. Why not use machine learning for text and sign recognition? ML models are certainly quicker and more computationally efficient, with near-perfect results (although they are more costly to build). The short answer is that this project was undertaken for a computer vision course, not a learning one. :)
 
