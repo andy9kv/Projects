@@ -29,13 +29,22 @@ Below we see mask M from the previous frame (green) attempting to find the optim
 
 &nbsp;&nbsp;&nbsp;&nbsp;This algorithm was implemented in 500 lines of Python code. The code can be found [here](Project_Files/Object_Tracking/tracker.py). Running it may be difficult as it requires OpenCV, which is notoriously difficult to install. The implementation is divided into three major parts: video reading and writing, feature extraction/correspondence, and mask creation/matching. The current implementation is rather slow, but it can be much quicker if the techniques used in my [Traffic Sign Detection project](Traffic%20Sign%20Detection.md) (such as lambda functions and vectorization) are used here. Note: Please forgive my horribly ineffient use of double for loops iterating over a matrix. I implore you, consult my other detection projects to realize that this is not, in fact, my creative zenith.
 
+The following example shows (from left to right): original video stream, each frames Key Points extracted by SIFT and the Harris Corner detector, the adaptive mask learning from and adaping to the delta of each frame, and the tracked object,
+
+<p float="center"> 
+	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image10.gif">
+	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image8.gif">
+	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image9.gif">
+	<img width="23%" height="100%" src="Project_Files/Object_Tracking/media/image11.gif">
+</p>
+
 Libraries Used:
 * [OpenCV 3.3](https://opencv.org/opencv-3-3.html) - Image management and computer vision algorithm implementations
 * [NumPy](https://www.numpy.org/) - Powerful and efficient n-dimensional array implementation (and much more!)
 
 ## Results & Conclusion
 
-
+The algorithm was able to successfully track 
 1 working
 failues and why they failed
 	biggest reason is fast rotation or very fast translation
