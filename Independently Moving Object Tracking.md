@@ -27,7 +27,7 @@ Below we see mask M from the previous frame (green) attempting to find the optim
 
 ## Implementation
 
-&nbsp;&nbsp;&nbsp;&nbsp;This algorithm was implemented in 500 lines of Python code. The code can be found [here](Project_Files/Object_Tracking/tracker.py). Running it may be difficult as it requires OpenCV, which is notoriously difficult to install. The implementation is divided into three major parts: video reading and writing, feature extraction/correspondence, and mask creation/matching. The current implementation is rather slow, but it can be much quicker if the techniques used in my [Traffic Sign Detection project](Traffic%20Sign%20Detection.md)(such as lambda functions and vectorization) are used here.
+&nbsp;&nbsp;&nbsp;&nbsp;This algorithm was implemented in 500 lines of Python code. The code can be found [here](Project_Files/Object_Tracking/tracker.py). Running it may be difficult as it requires OpenCV, which is notoriously difficult to install. The implementation is divided into three major parts: video reading and writing, feature extraction/correspondence, and mask creation/matching. The current implementation is rather slow, but it can be much quicker if the techniques used in my [Traffic Sign Detection project](Traffic%20Sign%20Detection.md) (such as lambda functions and vectorization) are used here.
 
 Libraries Used:
 * [OpenCV 3.3](https://opencv.org/opencv-3-3.html) - Image management and computer vision algorithm implementations
