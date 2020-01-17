@@ -20,3 +20,7 @@ I am in the process of finishing an 8-bit computer (on a bunch of breadboards ti
 ##### Organized Peer-to-Peer File Sharing System
 
 A Content-Addressable Network (CAN) is a decentralized and distributed peer-to-peer hash table (DHT) that eliminates redundency and optimizes accress time. Simliar implementations are used by software like Napster. This project is essentially an implementation of the [original paper](https://people.eecs.berkeley.edu/~sylvia/papers/cans.pdf) introducing a CAN.
+
+##### Autonomous Drone
+
+I am designing, building, and programming an autonomous drone (quadcopter) which will be controlled by observing people's gestures using several computer vision techniques through a set of cameras on its chassis
