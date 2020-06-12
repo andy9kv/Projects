@@ -1,7 +1,7 @@
 #### Here are some of my personal projects
 
 
-The current folder is a collection of md files that fully explain my (more or less) finished projects and link to the code/relevant material. For projects without respective md files, the fully commented code can be found [here](/Project_Files/).
+The current folder is a collection of md files that fully explain my (more or less) finished projects and link to the code/relevant material. The fully commented code for projects without respective md files can be found [here](/Project_Files/).
 
 #### Notable "Finished" Projects
 
