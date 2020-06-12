@@ -8,7 +8,7 @@ The current folder is a collection of md files that fully explain my (more or le
 * [Traffic Sign Detection](Traffic%20Sign%20Detection.md) (Python using OpenCV, NumPy) - Wrote a program to detect traffic signs in a video quickly and efficiently, exclusively using computer vision techniques such as gradients, edge maps and histograms, color thresholding, etc.
 * [Automatic Nautical Flag Recognition](Automatic%20Flag%20Recognition.md) (C++ using Microsoft Visual Studio, OpenCV) - Program to scan an image and determine which (if any) international nautical flags are present by color filtering, pattern matching, and applying localized histograms to recognize each flags’ distinct form.
 * [Independently Moving Object Tracking](Independently%20Moving%20Object%20Tracking.md) (Python using OpenCV, NumPy) - Developed a program to track a moving object in a video via feature correspondence and adaptive thresholding.
-* [Analysis of the Max-cut Problem](Max-cut%20Analysis.md) (Python using OpenCV, NumPy, Matplotlib) - Conducted an experimental analysis on two approximation algorithms to the NP-hard maxumum-cut problem for one of my graduate courses.
+* [An Experimental Analysis of the Max-cut Problem](Max-cut%20Analysis.md) (Python using OpenCV, NumPy, Matplotlib) - Conducted an experimental analysis on two approximation algorithms to the NP-hard maxumum-cut problem for one of my graduate courses.
 
 #### In-Progress Projects
 
