@@ -1,0 +1,103 @@
+amorato@zeus-1:~/os161/root$ sys161 kernel "sp1;sp2;q"
+sys161: System/161 release 2.0.2, compiled Feb  2 2015 11:24:13
+
+OS/161 base system version 2.0
+Copyright (c) 2000, 2001-2005, 2008-2011, 2013, 2014
+   President and Fellows of Harvard College.  All rights reserved.
+
+Andy's super cool system version 0 (ASST3 #17)
+
+1804k physical memory available
+Device probe...
+lamebus0 (system main bus)
+emu0 at lamebus0
+ltrace0 at lamebus0
+ltimer0 at lamebus0
+beep0 at ltimer0
+rtclock0 at ltimer0
+lrandom0 at lamebus0
+random0 at lrandom0
+lhd0 at lamebus0
+lhd1 at lamebus0
+lser0 at lamebus0
+con0 at lser0
+
+cpu0: MIPS/161 (System/161 2.x) features 0x0
+cpu1: MIPS/161 (System/161 2.x) features 0x0
+OS/161 kernel: sp1
+[male whale #10 starting]
+[female whale #7 starting]
+[matchmaker whale #4 starting]
+[matchmaker #4 has overseen male #10 and female #7 mate]
+[female whale #4 starting]
+[matchmaker whale #8 starting]
+[matchmaker whale #1 starting]
+[matchmaker whale #7 starting]
+[female whale #6 starting]
+[matchmaker whale #3 starting]
+[matchmaker whale #2 starting]
+[female whale #10 starting]
+[female whale #3 starting]
+[female whale #5 starting]
+[matchmaker whale #6 starting]
+[matchmaker whale #5 starting]
+[female whale #8 starting]
+[female whale #9 starting]
+[matchmaker whale #9 starting]
+[male whale #8 starting]
+[female whale #1 starting]
+[female whale #2 starting]
+[male whale #9 starting]
+[male whale #5 starting]
+[male #10 mated with female #7, per matchmaker #4]
+[female #7 mated with male #10, per matchmaker #4]
+[matchmaker whale #10 starting]
+[male whale #1 starting]
+[male whale #7 starting]
+[male whale #6 starting]
+[male whale #2 starting]
+[male whale #3 starting]
+[male whale #4 starting]
+[matchmaker #8 has overseen male #8 and female #4 mate]
+[female #4 mated with male #8, per matchmaker #8]
+[male #8 mated with female #4, per matchmaker #8]
+[matchmaker #1 has overseen male #9 and female #6 mate]
+[female #6 mated with male #9, per matchmaker #1]
+[male #9 mated with female #6, per matchmaker #1]
+[female #10 mated with male #5, per matchmaker #7]
+[matchmaker #7 has overseen male #5 and female #10 mate]
+[male #5 mated with female #10, per matchmaker #7]
+[matchmaker #3 has overseen male #1 and female #3 mate]
+[male #1 mated with female #3, per matchmaker #3]
+[female #3 mated with male #1, per matchmaker #3]
+[matchmaker #2 has overseen male #7 and female #5 mate]
+[female #5 mated with male #7, per matchmaker #2]
+[male #7 mated with female #5, per matchmaker #2]
+[matchmaker #6 has overseen male #6 and female #8 mate]
+[female #8 mated with male #6, per matchmaker #6]
+[male #6 mated with female #8, per matchmaker #6]
+[matchmaker #5 has overseen male #2 and female #9 mate]
+[male #2 mated with female #9, per matchmaker #5]
+[female #9 mated with male #2, per matchmaker #5]
+[matchmaker #9 has overseen male #3 and female #1 mate]
+[male #3 mated with female #1, per matchmaker #9]
+[female #1 mated with male #3, per matchmaker #9]
+[female #2 mated with male #4, per matchmaker #10]
+[matchmaker #10 has overseen male #4 and female #2 mate]
+[male #4 mated with female #2, per matchmaker #10]
+
+Congratulations, the whales have finished mating
+
+Operation took 14.349904440 seconds
+
+Operation took 12.702516840 seconds
+OS/161 kernel: q
+Shutting down.
+The system is halted.
+cpu1: offline.
+sys161: 712741441 cycles (649576784 run, 63164657 global-idle)
+sys161:   cpu0: 350239423 kern, 0 user, 213046402 idle; 249623 ll, 249251/372 sc, 533598 sync
+sys161:   cpu1: 487792504 kern, 0 user, 75493321 idle; 171703 ll, 171220/483 sc, 334135 sync
+sys161: 17849 irqs 0 exns 0r/0w disk 0r/5297w console 0r/0w/1m emufs 0r/0w net
+sys161: Elapsed real time: 67.754465 seconds (10.5195 mhz)
+sys161: Elapsed virtual time: 28.513947103 seconds (25 mhz)
