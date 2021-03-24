@@ -1,0 +1,26 @@
+
+Andys-MBP:thread_communication $ make
+gcc sync.c -lpthread -o run_sync
+Andys-MBP:thread_communication $ ./run_sync 
+[Server Thread] Launching client thread
+[Server Thread] Socket creation successful
+[Client Thread] Socket creation successful
+[Server Thread] Binding successful
+[Server Thread] Listening for a connection
+[Client Thread] Connection successful
+[Server Thread] Connection accepted
+[Server Thread] Writing message to client
+[Client Thread] Message: bowie
+[Server Thread] Writing message to client
+[Client Thread] Message: queen
+[Server Thread] Writing message to client
+[Client Thread] Message: elton
+[Server Thread] Writing message to client
+[Server Thread] Closing connection
+[Client Thread] Message: elvis
+[Server Thread] Waiting for client thread to exit
+[Client Thread] Closing connection
+[Client Thread] Exiting the thread
+[Server Thread] Ending the program
+Andys-MBP:thread_communication $ make clean
+rm -f run_sync
