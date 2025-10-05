@@ -26,10 +26,10 @@ Links to picures here on my GitHub and a very simple video of the computer count
 - [Sample instruction set from one of the many, many instruciton set pages](https://github.com/andy9kv/Projects/blob/master/Project_Files/8bit/media/sample_instruction_set.jpeg)
 - [Very simple video of the computer counting in very crappy resolution that somehow gets only 10% better as the videa goes on](https://www.youtube.com/watch?v=aP5stwasfco)
 
+<br><p align="center"><img width="80%" height="70%" src="Project_Files/8bit/media/full_8bit.jpg"></p><br>
+
 #### Death
 
 Eventually I ran into some power issues. I was splitting a phone charger and plugging that into my breadboards directly for power and ground. That worked for a while with some basic resistence calculations but soon enough the power supply became a mess after adding so many components to the 8-bit computer. Initially, certain chips started behaving unpredictably the futher they were from the power supply. I added some more phone chargers but that only lasted for so long. I told myself I'd come back and figure it out after reading through some electronic fundamentals but that didn't quite happen yet. 
-
-<br><p align="center"><img width="80%" height="70%" src="Project_Files/8bit/media/full_8bit.jpg"></p><br>
 
 I still have it in my basement, maybe I'll go back to it one day when I physically can't play soccer anymore.
